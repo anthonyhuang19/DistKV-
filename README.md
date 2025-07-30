@@ -12,21 +12,7 @@ It supports:
 
 ## 🎯 Motivation
 
-In real-world systems, relying on a single storage server is risky:
-- If one server fails, **all data might be lost** or **service becomes unavailable**.
-- By distributing and replicating data across multiple nodes, the system becomes **fault-tolerant**, **scalable**, and **resilient**.
-
-This project helps you learn:
-- Distributed system concepts
-- Socket programming in C++
-- Multithreading
-- Data replication
-
-
-
-- Each node is a TCP server.
-- When a `SET` command is received, the node stores it **and replicates to peer nodes**.
-- `GET` looks up the local storage.
+In real-world systems, relying on a single storage server is risky, as a single point of failure can lead to total data loss or service unavailability. To address this, distributing and replicating data across multiple nodes enhances system fault tolerance, scalability, and resilience. This project serves as a hands-on introduction to key concepts in distributed systems, including TCP socket programming, multithreading, and data replication in C++. Each node operates as an independent TCP server: upon receiving a SET command, it stores the key-value pair locally and asynchronously replicates the data to peer nodes; on a GET command, it retrieves the value from its own local storage, providing a simplified yet insightful model of distributed key-value storage.
 
 ## 📁 File Structure
 ````
