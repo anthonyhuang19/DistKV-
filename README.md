@@ -1,4 +1,4 @@
-# 🗃️ Distributed Key-Value Store in C++
+# 🗃️ DistKV++: A High-Performance Distributed Key-Value Store in C++
 
 ## 📌 Overview
 
@@ -76,74 +76,6 @@ john
 chmod +x test.sh
 ./test.sh
 ```
-Testing Result
-```bash
-[INFO] Running Distributed Key-Value Store Tests
-
-[INFO] Step 1: SET to Node 9000
-OK
-OK
-OK
-OK
-OK
-[INFO] Step 2: GET from Node 9001 (replica)
-[FAIL] GET user1 on port 9001 =>  (expected alice)
-[PASS] GET user2 on port 9001 => bob
-[PASS] GET user3 on port 9001 => carol
-[PASS] GET user4 on port 9001 => dave
-[PASS] GET user5 on port 9001 => elena
-[INFO] Step 3: SET to Node 9001
-OK
-OK
-OK
-OK
-OK
-[INFO] Step 4: GET from Node 9000 (replica)
-[FAIL] GET city1 on port 9000 => Not Found (expected tokyo)
-[FAIL] GET city2 on port 9000 => Not Found (expected seoul)
-[FAIL] GET city3 on port 9000 => Not Found (expected beijing)
-[FAIL] GET city4 on port 9000 => Not Found (expected bangkok)
-[FAIL] GET city5 on port 9000 => Not Found (expected jakarta)
-[INFO] Step 5: Overwrite key test
-OK
-[PASS] GET user1 on port 9001 => anthony
-[INFO] Step 6: Stress test with 30 keys
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-OK
-[PASS] Stress test passed for all 30 keys (9000 ➜ 9001)
-[INFO] Step 7: Request non-existent key
-[FAIL] GET nokey on port 9000 returned: Not Found
-
-[INFO] ✅ All automated tests completed.
-```
 
 ## 🧪 Automated Testing
 
@@ -168,9 +100,3 @@ This will:
 - Add hashing or sharding  
 - Add persistence (e.g., to file or SQLite)  
 - Add CLI client  
-
-## 👨‍💻 Author
-
-Created by **Junxiang Huang (Anthony)**  
-💬 Languages: C++, Python, Bahasa, 中文  
-🚀 Interested in distributed systems and ML engineering
