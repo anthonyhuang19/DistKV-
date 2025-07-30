@@ -1,4 +1,4 @@
-# 🗃️ DistKV++: A High-Performance Distributed Key-Value Store in C++
+# 🗃️ KeyMesh: A High-Performance Distributed Key-Value Store in C++
 
 ## 📌 Overview
 
